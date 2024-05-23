@@ -20,4 +20,10 @@ class Products extends Model
     {
         return $this->belongsTo(Brand::class, 'id_brand', 'id_brand');
     }
+
+    // Relación con la tabla Brand (relación uno a uno o uno a muchos)
+    public function photos()
+    {
+        return $this->hasMany(ProductsImages::class, 'id_product_image', 'id_product');
+    }
 }

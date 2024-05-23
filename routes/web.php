@@ -18,7 +18,10 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/products', 'ProductsController@index');
+$router->post('/product', 'ProductsController@show');
 
 $router->post('/login', 'AuthController@login');
 
 $router->get('/invoices/created', 'InvoicesController@created');
+
+$router->get('/resources', 'ResourcesController@index');

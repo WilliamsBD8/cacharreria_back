@@ -16,6 +16,7 @@ class Brand extends Migration
         Schema::create('brand', function (Blueprint $table) {
             $table->id('id_brand');
             $table->string('name');
+            $table->longText('description');
             $table->timestamps();
         });
     }
